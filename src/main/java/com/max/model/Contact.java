@@ -1,5 +1,6 @@
 package com.max.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 import java.util.Map;
@@ -13,6 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Contact {
 
   @Id
